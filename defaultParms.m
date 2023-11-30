@@ -3,8 +3,10 @@
 % Lab 1.3.5., Dpto. of Ingenieria de Comunicaciones. University of Malaga
 % *************************************************************************
 % DESCRIPTION:
-% This script contains the default parameters
+% This function sets the default values of the simulation parameters
 % *************************************************************************
+
+function [p, vP] = defaultParms()
 
 % ESTIMATION OF STATISTICS
 % *************************************************************************

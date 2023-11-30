@@ -15,17 +15,17 @@ clc; clear;
 
 % LOAD DEFAULT PARAMETERS
 % *************************************************************************
-defaultParms;
+[p, vP] = defaultParms();
 
 % CUSTOMIZE PARAMETERS
 % *************************************************************************
 % *) Result folder
-p.resultFolder = 'prueba';
+p.resultFolder = 'single_tier';
 % *) Number of elements of the vectorial parameters. Number of points of
 % graphs showing key performance metrics.
-p.nVal = 1;
+p.nVal = 10;
 % *) Number of spatial realizations
-p.nSpatReal = 1e1;
+p.nSpatReal = 1e2;
 % *) x-label for the performance figures
 p.xLabel = 'p_{MBS} (dBm/Hz)';
 % *) x-axis for the performance figures
@@ -36,7 +36,16 @@ p.saveLocations = true;
 
 % SPECIFIC PARAMETERS
 % *************************************************************************
+% Modify here those parameters that will use a diferent value than the one
+% stored in defaultParms
 vP.pmaxMBSdBmpHz = p.xVtc;
+
+% *) Density of Macro Base Stations (MBSs). Points/m2
+vP.lambdaMBSs = 2e-6;
+% *) Density of Small cell Base Stations (SBSs). Points/m2
+vP.lambdaSBSs = 0e-6;
+% *) Density of Mobile Terminals (MTs). Points/m2
+vP.lambdaMTs = 150e-6;
 
 % MAIN FUNCTION
 % *************************************************************************

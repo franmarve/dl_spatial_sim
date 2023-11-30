@@ -52,3 +52,5 @@ for iBS = 1:loc.nBSs
         loc.PhiMT(loc.asocBS2MT{iBS}, 2), 'LineStyle', 'none', ...
         'Color', this_color_UE, 'Marker', 'x'); hold on;
 end
+
+xlabel('x (m)'); ylabel('y (m)');
